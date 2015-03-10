@@ -13,7 +13,7 @@ section, header, footer {
 #wrapper {
   width: 600px;
   margin: 0 auto;
-  background: #fff url(/images/shade.jpg) repeat-x center bottom;
+  background: #fff url(../images/shade.jpg) repeat-x center bottom;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   border-radius: 10px;
@@ -67,7 +67,7 @@ footer > * {
   content: '...quickly';
 }
 */
-[contenteditable]:hover {
+[contenteditable]:hover:not(:focus) {
   outline: 1px dotted #ccc;
 }
 
@@ -83,9 +83,25 @@ li {
   margin-bottom: 10px;
 }
 
+#promo {
+  font-size: 90%;
+  background: #333 url(../images/learn-js.jpg) no-repeat left center;
+  display: block;
+  color: #efefef;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 0px 20px 0px 260px;
+  border: 5px solid #006;
+  height: 160px;
+}
+
+#promo:hover {
+  border-color: #00f;
+}
+
 #ih5 {
   font-size: 90%;
-  background: #442C0D url(/images/ih5.jpg) no-repeat left center;
+  background: #442C0D url(../images/ih5.jpg) no-repeat left center;
   display: block;
   color: #F7FCE4;
   text-decoration: none;
@@ -122,7 +138,7 @@ li {
   text-decoration: underline;
 }
 
-input {
+button, input {
   font-size: 16px;
   padding: 3px;
   margin-left: 5px;  
@@ -177,7 +193,7 @@ body.view-source #view-source {
 }
 
 #demos .support {
-  width: 105px;
+  width: 126px;
 }
 
 .support span {
@@ -188,7 +204,7 @@ body.view-source #view-source {
   height: 16px;
   width: 16px;
   text-indent: -9999px;
-  background-image: url(/images/browsers.gif);
+  background-image: url(../images/browsers.gif);
   background-repeat: none;
   margin-right: 5px;
 }
@@ -261,6 +277,31 @@ body.view-source #view-source {
 #html5badge {
 /*  display: none;*/
   margin-left: -30px;
+  border: 0;
+}
+
+#html5badge img {
+  border: 0;
+}
+
+.support span.yourbrowser {
+  width: 16px;
+  height: 16px;
+  background: none;
+}
+
+.support span.yourbrowser.supported {
+  background: url(../images/yourbrowser.gif) no-repeat top left;
+}
+
+.support span.yourbrowser.not-supported {
+  background: url(../images/yourbrowser.gif) no-repeat top right;
+}
+
+#carbonads-container {
+  position: fixed;
+  margin-left: 620px;
+  margin-top: -2px;
 }
 
 /** Pretty printing styles. Used with prettify.js. */
